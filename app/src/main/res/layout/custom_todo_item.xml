@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <TextView
+        android:id="@+id/todoItem"
+        android:layout_width="129dp"
+        android:layout_height="34dp"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/dueDate"
+        android:layout_width="132dp"
+        android:layout_height="34dp"
+        android:layout_marginLeft="1dp"
+        android:layout_toRightOf="@+id/todoItem"
+        android:text="TextView" />
+
+    <CheckBox
+        android:id="@+id/complete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/dueDate"
+        android:focusable="false"
+        android:text="Complete" />
+
+    <TextView
+        android:id="@+id/todoId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/complete"
+        android:visibility="invisible"
+        android:text="" />
+
+</RelativeLayout>

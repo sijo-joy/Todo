@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <TextView
+        android:id="@+id/todo_name"
+        android:layout_width="188dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="12dp"
+        android:text="TextView"
+        android:textSize="40sp"/>
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="59dp"
+        android:layout_toRightOf="@+id/todo_name"
+        android:onClick="renameTodoName"
+        android:text="Rename Todo" />
+
+    <EditText
+        android:id="@+id/todo_item_name"
+        android:layout_width="188dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/todo_name"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="95dp"
+        android:hint="Todo item"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/due_date"
+        android:layout_width="188dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="149dp"
+        android:hint="Due Date(Optional)"
+        android:inputType="date" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="218dp"
+        android:onClick="saveTodoItem"
+        android:text="Save" />
+
+    <TextView
+        android:id="@+id/totalItems"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button"
+        android:text="Total Items:" />
+    <TextView
+        android:id="@+id/totalItemsCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button"
+        android:layout_toRightOf="@+id/totalItems"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/completedItems"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/totalItems"
+        android:text="Completed Items:" />
+
+
+
+    <TextView
+        android:id="@+id/completedItemsCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/totalItems"
+        android:layout_toRightOf="@+id/completedItems"
+        android:text="" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/totalItems"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="303dp"
+        android:background="?android:attr/listDivider" />
+
+    <ListView
+        android:id="@+id/todo_items"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/divider"
+        android:layout_marginTop="29dp" />
+
+
+</RelativeLayout>
